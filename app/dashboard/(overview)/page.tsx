@@ -17,6 +17,7 @@ export default async function Page() {
       </h1>
       <div className="flex flex-col">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {/* // Suspense */}
           <Suspense fallback={<CardsSkeleton />}>
             <CardWrapper />
           </Suspense>

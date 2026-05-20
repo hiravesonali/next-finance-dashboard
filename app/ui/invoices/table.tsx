@@ -17,6 +17,7 @@ export default async function InvoicesTable({
     <div className="mt-6 flow-root">
       <div className="inline-block min-w-full align-middle">
         <div className="rounded-lg bg-gray-50 p-2 md:pt-0">
+          {/* Mobile menu */}
           <div className="md:hidden">
             {invoices?.map((invoice) => (
               <div
@@ -54,6 +55,7 @@ export default async function InvoicesTable({
               </div>
             ))}
           </div>
+          {/* desktop menu */}
           <table className="hidden min-w-full text-gray-900 md:table">
             <thead className="rounded-lg text-left text-sm font-normal">
               <tr>

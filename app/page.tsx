@@ -15,8 +15,8 @@ export default function Page() {
           <p
             className={` ${lusitana.className} text-xl text-gray-800 md:text-3xl md:leading-normal`}
           >
-            <strong>Welcome to FinDesk 👋</strong> Manage invoices, customers,
-            and financial performance from one place.
+            <strong>Welcome to FinDesk 👋</strong> <br></br>Manage invoices,
+            customers, and financial performance from one place.
           </p>
           <Link
             href="/login"

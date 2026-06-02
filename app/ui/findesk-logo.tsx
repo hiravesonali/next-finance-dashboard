@@ -1,7 +1,7 @@
 import { lusitana } from '@/app/ui/fonts';
 import { ChartPieIcon } from '@heroicons/react/24/outline';
 
-export default function AcmeLogo() {
+export default function FinDeskLogo() {
   return (
     <div
       className={`${lusitana.className} flex flex-row items-center leading-none text-white`}

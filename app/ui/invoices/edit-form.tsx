@@ -91,7 +91,7 @@ export default function EditInvoiceForm({
         </div>
 
         {/* Invoice Status */}
-        <fieldset>
+        <fieldset aria-describedby="status-error">
           <legend className="mb-2 block text-sm font-medium">
             Set the invoice status
           </legend>
@@ -105,7 +105,6 @@ export default function EditInvoiceForm({
                   value="pending"
                   defaultChecked={invoice.status === 'pending'}
                   className="h-4 w-4 cursor-pointer border-gray-300 bg-gray-100 text-gray-600 focus:ring-2"
-                  aria-describedby="status-error"
                 />
                 <label
                   htmlFor="pending"
@@ -122,7 +121,6 @@ export default function EditInvoiceForm({
                   value="paid"
                   defaultChecked={invoice.status === 'paid'}
                   className="h-4 w-4 cursor-pointer border-gray-300 bg-gray-100 text-gray-600 focus:ring-2"
-                  aria-describedby="status-error"
                 />
                 <label
                   htmlFor="paid"
@@ -135,7 +133,7 @@ export default function EditInvoiceForm({
           </div>
           <div id="status-error" aria-live="polite" aria-atomic="true">
             {state.errors?.status &&
-              state.errors.amount?.map((error) => (
+              state.errors.status.map((error) => (
                 <p className="mt-2 text-sm text-red-500" key={error}>
                   {error}
                 </p>
@@ -144,7 +142,7 @@ export default function EditInvoiceForm({
         </fieldset>
         <div id="error" aria-live="polite" aria-atomic="true">
           {state.message && (
-            <p className="mt-2 text-sm text-red-500">{state.message}</p>
+            <p className="mt-10 text-sm text-red-500">{state.message}</p>
           )}
         </div>
       </div>
